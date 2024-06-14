@@ -28,6 +28,11 @@ The userdata shell script contains the bulk of the configuration. It scans the A
 Go ahead and deploy the cluster in your AWS environment. Make sure you have a public-private keypair in the ~/.ssh directory. Use ssh-keygen to create the key files. Install Terraform and the AWS CLI. Create ~/.aws/credentials file to store your AWS Secret Key and Access Key locally for Terraform to use. I hope everything works great on the first try.
 
 
+## Deployment Architecture 
+
+![deployment architecture diagram](https://github.com/TejasMore324/Mongodb-terraform-deployment/assets/172258584/6b26cafe-2af7-40c3-83ae-18b46885314f)
+
+
 ## Steps to Deploy
 
 1.Clone this repository
