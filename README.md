@@ -17,7 +17,7 @@ All the source code is available at my GitHub repository. The code is structured
 
 The MongoDB cluster module takes in a lot of configurable parameters which can be supplied by the terraform.tfvars file.
 
-We're going to deploy MongoDB v6.0 using the Amazon Linux 2 AMI. This page from the official MongoDB documentation delineates steps to follow for installing MongoDB on Amazon Linux AMI. Just browsing through the insane number of steps involved or the confusing order of steps, you can imagine the dividend of scripting the commands rather than scampering through the documentation to figure out what worked the last time. Additionally, since this isn't a single node deployment, we need to deploy a replica set for MongoDB.
+We're going to deploy MongoDB v6.0 using the Amazon Linux 2 AMI. The official MongoDB documentation delineates steps to follow for installing MongoDB on Amazon Linux AMI. Just browsing through the insane number of steps involved or the confusing order of steps, you can imagine the dividend of scripting the commands rather than scampering through the documentation to figure out what worked the last time. Additionally, since this isn't a single node deployment, we need to deploy a replica set for MongoDB.
 
 The main.tf file for the MongoDB cluster module contains the code for creating the resources like EC2 instances, IAM policies, Security Groups, etc. Using Terraform's file provisioner, certain scripts and files (like the private key file needed to be shared by all the participating nodes) are uploaded to the instances while creating them.
 
