@@ -1,4 +1,5 @@
-"**##Automated deployment of MongoDB cluster to AWS using Terraform**"
+
+# Automated deployment of MongoDB cluster to AWS using Terraform
 
 An automated setup to deploy a MongoDB Cluster with a Replica Set (1 Primary, n Secondary nodes)
 
@@ -24,14 +25,13 @@ The "count" parameter (passed by the user) controls how many nodes to create. Th
 
 The userdata shell script contains the bulk of the configuration. It scans the AWS environment for the cluster members and configures each instance with the private IPs of other members. This is accomplished by using the EC2 Instance Metadata Service. Also, each instance has a Tag attached to it which helps to identify whether it's a Primary or Secondary node.
 
-This is the architecture diagram of the deployment:
 
-###Deployment Architecture
+## Deployment Architecture 
+
+![Deployment Architecture](deployment architecture diagram.jpg)
 
 
-(![Deployment Achitecture](<deployment architecture diagram.jpg>))
-
-##Steps to Deploy
+## Steps to Deploy
 
 1.Clone this repository
 
@@ -39,19 +39,19 @@ This is the architecture diagram of the deployment:
 
 3.Edit the variables in the terraform.tfvars file
 
-  vpc_name = "mongo_vpc"
-  replica_set_name = "mongoRs"
-  num_secondary_nodes = 2
-  mongo_username = "admin"
-  mongo_password = "mongo4pass"
-  mongo_database = "admin"
-
+```bash
+vpc_name = "mongo_vpc"
+replica_set_name = "mongoRs" 
+num_secondary_nodes = 2 
+mongo_username = "admin" 
+mongo_password = "mongo4pass" 
+mongo_database = "admin"
+```
 4.Set up the AWS CLI on your development machine and configure the ~/.aws/credentials file
-
-  [default]
-  aws_access_key_id = xxxxxxxxxxxxxxxxxx
-  aws_secret_access_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+```bash
+[default] aws_access_key_id = xxxxxxxxxxxxxxxxxx 
+aws_secret_access_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 5.Install Terraform on your development machine
 
 6.Use "terraform init" to initialize the modules
@@ -60,4 +60,4 @@ This is the architecture diagram of the deployment:
 
 8.Use "terraform apply" to deploy the cluster
 
-Go ahead and deploy the cluster in your AWS environment. Make sure you have a public-private keypair in the ~/.ssh directory. Use ssh-keygen to create the key files. Install Terraform and the AWS CLI. Create ~/.aws/credentials file to store your AWS Secret Key and Access Key locally for Terraform to use. I hope everything works great on the first try. 
+
