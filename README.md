@@ -1,4 +1,4 @@
-##Automated deployment of MongoDB cluster to AWS using Terraform
+"**##Automated deployment of MongoDB cluster to AWS using Terraform**"
 
 An automated setup to deploy a MongoDB Cluster with a Replica Set (1 Primary, n Secondary nodes)
 
