@@ -31,7 +31,7 @@ Go ahead and deploy the cluster in your AWS environment. Make sure you have a pu
 ## Deployment Architecture 
 
 
-![deployment architecture diagram](https://github.com/TejasMore324/Mongodb-terraform-deployment/assets/172258584/6b26cafe-2af7-40c3-83ae-18b46885314f)
+![deployment architecture diagram](https://github.com/TejasMore324/Mongodb-terraform-deployment/assets/172258584/6857f505-43cf-4d1f-a2cc-9ef01c789925)
 
 
 ## Steps to Deploy
